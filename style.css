@@ -2,26 +2,200 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   font-family: Georgia, serif;
   background: #dfe8d8;
   color: #243126;
+}
+
+.tiny-house {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 40px 20px 60px;
+}
+
+/* SKY */
+
+.sky {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.moon {
+  position: absolute;
+  top: 45px;
+  right: 10%;
+  font-size: 55px;
+  color: #fff8dc;
+  transform: rotate(-15deg);
+}
+
+.stars {
+  position: absolute;
+  top: 100px;
+  left: 10%;
+  font-size: 18px;
+  letter-spacing: 8px;
+  color: #fff8dc;
+}
+
+/* HOUSE */
+
+.house {
+  position: relative;
+  width: 330px;
+  max-width: 90vw;
+  margin: 100px auto 0;
+}
+
+/* ROOF */
+
+.roof {
+  width: 0;
+  height: 0;
+  border-left: 175px solid transparent;
+  border-right: 175px solid transparent;
+  border-bottom: 120px solid #536b55;
+  margin: auto;
+  position: relative;
+}
+
+.roof-line {
+  position: absolute;
+  width: 250px;
+  height: 8px;
+  background: #354a38;
+  left: -125px;
+  top: 95px;
+  border-radius: 10px;
+}
+
+/* HOUSE BODY */
+
+.house-body {
+  width: 300px;
+  height: 230px;
+  margin: -2px auto 0;
+  background: #f7f0df;
+  border: 5px solid #354a38;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 12px 0 #b8c8ae;
+}
+
+/* WINDOWS */
+
+.window {
+  width: 58px;
+  height: 68px;
+  background: #b9d4d0;
+  border: 5px solid #354a38;
+  position: absolute;
+  top: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 25px;
+  color: #fff8dc;
 }
 
-.house {
-  text-align: center;
+.window-left {
+  left: 25px;
 }
 
-h1 {
-  font-size: 42px;
+.window-right {
+  right: 25px;
+}
+
+/* DOOR */
+
+.front-door {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 82px;
+  height: 145px;
+  background: #6d7f68;
+  border: 5px solid #354a38;
+  border-bottom: none;
+  border-radius: 45px 45px 0 0;
+}
+
+.door-number {
+  margin-top: 18px;
+  color: #f7f0df;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.door-handle {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #e8c878;
+  position: absolute;
+  right: 13px;
+  top: 78px;
+}
+
+/* GARDEN */
+
+.garden {
+  margin-top: -2px;
+  font-size: 28px;
+  letter-spacing: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+/* INTRO */
+
+.intro {
+  margin-top: 55px;
+}
+
+.small-title {
+  font-size: 12px;
+  letter-spacing: 5px;
   margin-bottom: 10px;
 }
 
-p {
+h1 {
+  font-size: clamp(40px, 9vw, 68px);
+  margin: 0;
+  font-weight: normal;
+}
+
+.description {
   font-size: 18px;
+  line-height: 1.7;
+  margin: 18px 0 25px;
+}
+
+.enter-button {
+  border: 2px solid #354a38;
+  background: #f7f0df;
+  color: #243126;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.enter-button:hover {
+  background: #354a38;
+  color: #f7f0df;
+  transform: translateY(-4px);
 }
