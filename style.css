@@ -32,20 +32,31 @@ body {
 
 .moon {
   position: absolute;
-  top: 45px;
-  right: 10%;
-  font-size: 55px;
+  top: 35px;
+  right: 12%;
+  font-size: 58px;
   color: #fff8dc;
-  transform: rotate(-15deg);
 }
 
-.stars {
+.star {
   position: absolute;
-  top: 100px;
-  left: 10%;
-  font-size: 18px;
-  letter-spacing: 8px;
   color: #fff8dc;
+  font-size: 20px;
+}
+
+.star-one {
+  top: 80px;
+  left: 15%;
+}
+
+.star-two {
+  top: 145px;
+  left: 30%;
+}
+
+.star-three {
+  top: 65px;
+  right: 30%;
 }
 
 /* HOUSE */
@@ -54,125 +65,124 @@ body {
   position: relative;
   width: 330px;
   max-width: 90vw;
-  margin: 100px auto 0;
+  margin: 110px auto 0;
 }
 
 /* ROOF */
 
 .roof {
-  width: 0;
-  height: 0;
-  border-left: 175px solid transparent;
-  border-right: 175px solid transparent;
-  border-bottom: 120px solid #536b55;
-  margin: auto;
+  width: 300px;
+  height: 110px;
+  margin: 0 auto;
+  background: #536b55;
   position: relative;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 }
 
-.roof-line {
+.roof span {
   position: absolute;
-  width: 250px;
-  height: 8px;
-  background: #354a38;
-  left: -125px;
-  top: 95px;
-  border-radius: 10px;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff8dc;
+  font-size: 22px;
 }
 
 /* HOUSE BODY */
 
 .house-body {
-  width: 300px;
-  height: 230px;
-  margin: -2px auto 0;
+  width: 280px;
+  height: 220px;
+  margin: 0 auto;
   background: #f7f0df;
   border: 5px solid #354a38;
-  border-radius: 4px;
   position: relative;
-  box-shadow: 0 12px 0 #b8c8ae;
 }
 
 /* WINDOWS */
 
 .window {
-  width: 58px;
-  height: 68px;
+  position: absolute;
+  top: 42px;
+  width: 55px;
+  height: 65px;
   background: #b9d4d0;
   border: 5px solid #354a38;
-  position: absolute;
-  top: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 25px;
   color: #fff8dc;
+  font-size: 23px;
 }
 
-.window-left {
-  left: 25px;
+.left-window {
+  left: 20px;
 }
 
-.window-right {
-  right: 25px;
+.right-window {
+  right: 20px;
 }
 
 /* DOOR */
 
-.front-door {
+.door {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 82px;
-  height: 145px;
+  width: 78px;
+  height: 140px;
   background: #6d7f68;
   border: 5px solid #354a38;
   border-bottom: none;
-  border-radius: 45px 45px 0 0;
+  border-radius: 40px 40px 0 0;
 }
 
 .door-number {
-  margin-top: 18px;
+  display: block;
+  margin-top: 15px;
   color: #f7f0df;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 2px;
 }
 
-.door-handle {
+.handle {
+  position: absolute;
+  right: 11px;
+  top: 75px;
   width: 9px;
   height: 9px;
   border-radius: 50%;
   background: #e8c878;
-  position: absolute;
-  right: 13px;
-  top: 78px;
 }
 
 /* GARDEN */
 
 .garden {
-  margin-top: -2px;
-  font-size: 28px;
-  letter-spacing: 8px;
   position: relative;
   z-index: 2;
+  margin-top: -4px;
+  font-size: 26px;
+  letter-spacing: 5px;
 }
 
-/* INTRO */
+/* TEXT */
 
 .intro {
-  margin-top: 55px;
+  position: relative;
+  z-index: 3;
+  margin-top: 45px;
 }
 
-.small-title {
+.welcome {
   font-size: 12px;
   letter-spacing: 5px;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
 h1 {
-  font-size: clamp(40px, 9vw, 68px);
   margin: 0;
+  font-size: clamp(40px, 9vw, 68px);
   font-weight: normal;
 }
 
@@ -181,6 +191,8 @@ h1 {
   line-height: 1.7;
   margin: 18px 0 25px;
 }
+
+/* BUTTON */
 
 .enter-button {
   border: 2px solid #354a38;
@@ -191,11 +203,4 @@ h1 {
   font-family: Georgia, serif;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.enter-button:hover {
-  background: #354a38;
-  color: #f7f0df;
-  transform: translateY(-4px);
 }
